@@ -1,7 +1,30 @@
 <?php
-function addition(string $vremya1, string $vremya2): string
+function sumTime(string $timeOne, string $timeTwo): string
 {
-    $time = strtotime($vremya1) + strtotime($vremya2);
-    return date('H:i:s', $time);
+    $arraysigns = array('?', '!');
+	$arraysymbol = range('A', 'Z');
+	$arrTimeOne = str_split($timeOne);
+	$arrTimeTwo = str_split($timeTwo);
+    foreach($arraysigns as $sign)
+    {
+        $pos1 = strpos($timeOne, $sign);
+        $pos2 = strpos($timeTwo, $sign);
+		if(!in_array($arraysymbol, $arrTimeOne) && !in_array($arraysymbol, $arrTimeTwo))
+		{
+			if($pos1 === false && $pos2 === false)
+			{
+				$time = strtotime($timeOne) + strtotime($timeTwo);
+			} 
+			else
+			{
+				return 'error';
+			}
+		}
+		else
+		{
+			return 'errorchik';
+		}
+    }
+	return date('H:i:s', $time);
 }
-echo addition('10:15:30', '10:20:30');
+echo sumTime('10:15:30', '01:20:30');

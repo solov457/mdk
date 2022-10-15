@@ -1,19 +1,29 @@
 <?php
-function Calc(string $expressionStr): float
+function calc(string $expressionStr): float | string 
 {
-    $Nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    $Operators = ['+', '-', '*', '/','(',')'];
+    $nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    $operators = ['+', '-', '*', '/','(',')'];
 	
 
-    $Array = str_split($expressionStr);
+    $array = str_split($expressionStr);
 
     foreach ($Array as $char)
     {
-        if (!in_array($char, $Operators) && !in_array($char, $Nums))
+        if (!in_array($char, $operators) && !in_array($char, $nums) || strpos($expressionStr, '/0'))
         {
-            echo "Ошибка";
+            throw new Exception('Warning!!!');
         }
+
     }
+
     return eval('return '.$expressionStr.';');
 }
-echo Calc("10*6-9");
+
+try
+{
+    echo ("Ответ: ".calc("(10+10)*12"));
+} 
+catch (Exception $e)
+{
+    echo $e->getMessage();
+}
