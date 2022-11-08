@@ -1,0 +1,16 @@
+{
+    "name": "anya/test",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Anya\\Test\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "solov457",
+            "email": "solovyovaanna20@gmail.com"
+        }
+    ],
+    "require": {}
+}

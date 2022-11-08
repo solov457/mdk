@@ -1,0 +1,28 @@
+.text1{
+	width: 200px; /* Ширина слоя */ 
+	float: left; /* Обтекание с соседним слоем */ 
+	color: white; /* Цвет текста */
+	background: #008080; /* Цвет фона */
+	padding: 10px;
+}
+.text2{
+width: 200px; /* Ширина слоя */ 
+	float: left; /* Обтекание с соседним слоем */ 
+	color: white; /* Цвет текста */
+	background: #008080; /* Цвет фона */
+	padding: 10px;
+}
+.text3{
+	width: 200px; /* Ширина слоя */ 
+	float: left; /* Обтекание с соседним слоем */ 
+	color: white; /* Цвет текста */
+	background: #008080; /* Цвет фона */
+	padding: 10px;
+}
+.text4{
+	width: 200px; /* Ширина слоя */ 
+	float: left; /* Обтекание с соседним слоем */ 
+	color: white; /* Цвет текста */
+	background: #008080; /* Цвет фона */
+	padding: 10px;
+}
